@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - FINDIT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-body" onload="checkAdminAccess()">
+    <div class="container">
+        <header class="header glass">
+            <a href="dashboard.html" class="back-btn"><i class="fas fa-arrow-left"></i> Dashboard</a>
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <h3>Admin Portal</h3>
+            </div>
+        </header>
+
+        <div class="admin-stats">
+            <div class="stat-card glass">
+                <h3>Total Claims</h3>
+                <span id="totalClaims" class="stat-number">0</span>
+            </div>
+            <div class="stat-card glass">
+                <h3>Pending</h3>
+                <span id="pendingClaims" class="stat-number">0</span>
+            </div>
+            <div class="stat-card glass">
+                <h3>Verified</h3>
+                <span id="verifiedClaims" class="stat-number">0</span>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h2>Pending Claims</h2>
+            <div class="claims-grid" id="claimsGrid">
+                <!-- Claims will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

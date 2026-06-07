@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Item - FINDIT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="claim-body">
+    <div class="container">
+        <header class="header glass">
+            <a href="found-items.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Found Items</a>
+            <div class="logo">
+                <i class="fas fa-search"></i>
+                <h3>FINDIT</h3>
+            </div>
+            <div class="user-info">
+                <span id="claimUserName">User</span>
+            </div>
+        </header>
+
+        <main class="claim-container">
+            <!-- Item Details Card -->
+            <div class="item-detail-card glass" id="itemDetailCard">
+                <div class="item-image-large">
+                    <img id="claimItemImage" src="" alt="">
+                </div>
+                <div class="item-detail-content">
+                    <h1 id="claimItemName">Item Name</h1>
+                    <div class="item-meta">
+                        <span class="meta-item"><i class="fas fa-calendar"></i> <span id="claimItemDate"></span></span>
+                        <span class="meta-item"><i class="fas fa-user"></i> Found by someone</span>
+                    </div>
+                    <p id="claimItemDescription">Item description will appear here...</p>
+                    <div class="status-badge available">
+                        <i class="fas fa-check-circle"></i> Available for Claim
+                    </div>
+                </div>
+            </div>
+
+            <!-- Claim Form -->
+            <div class="claim-form-card glass">
+                <div class="claim-header">
+                    <i class="fas fa-hand-holding"></i>
+                    <h2>Claim This Item</h2>
+                    <p>Provide your contact details for verification</p>
+                </div>
+                
+                <form id="claimForm" class="claim-form">
+                    <div class="input-group">
+                        <label>Your Full Name</label>
+                        <input type="text" id="claimerName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Contact Number</label>
+                        <input type="tel" id="contactNumber" placeholder="+92 xx xxxxxxx" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Social Media / Email</label>
+                        <input type="text" id="socialMedia" placeholder="username@gmail.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Proof of Ownership(Required)</label>
+                        <textarea id="proofDescription" placeholder="Describe how you can prove this is your item (receipt, photo, unique markings, etc.)" required></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Upload Proof Photo(Optional)</label>
+                        <input type="file" id="proofImage" accept="image/*">
+                        <div class="image-preview" id="proofImagePreview"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full claim-submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Claim Request
+                    </button>
+                </form>
+                
+                <div class="claim-info">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Your claim will be reviewed by admin within 24 hours</span>
+                </div>
+            </div>
+
+            <!-- Claim Status (Hidden initially) -->
+            <div class="claim-status-card glass" id="claimStatusCard" style="display: none;">
+                <div class="status-icon success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Claim Submitted Successfully!</h2>
+                <p id="claimStatusMessage">Your claim has been submitted and is waiting for admin verification.</p>
+                <div class="status-details">
+                    <div class="status-row">
+                        <span>Status:</span>
+                        <span class="status-badge pending"><i class="fas fa-clock"></i> Waiting Verification</span>
+                    </div>
+                    <div class="status-row">
+                        <span>Claim ID:</span>
+                        <span id="claimId"></span>
+                    </div>
+                    <div class="status-row">
+                        <span>Submitted:</span>
+                        <span id="claimSubmitDate"></span>
+                    </div>
+                </div>
+                <div class="status-actions">
+                    <a href="found-items.html" class="btn btn-primary">View Other Items</a>
+                    <a href="my-lost-items.html" class="btn btn-outline">Check My Items</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

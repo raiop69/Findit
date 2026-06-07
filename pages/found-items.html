@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Items - FINDIT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="items-body">
+    <div class="container">
+        <header class="header glass">
+            <a href="dashboard.html" class="back-btn"><i class="fas fa-arrow-left"></i> Dashboard</a>
+            <div class="logo">
+                <i class="fas fa-search"></i>
+                <h3>FINDIT</h3>
+            </div>
+        </header>
+
+        <div class="items-header">
+            <h1>Found Items</h1>
+            <p>Browse items that people have found</p>
+        </div>
+
+        <div class="items-grid" id="foundItemsGrid">
+            <!-- Items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Revoke Confirmation Modal -->
+    <div id="revokeModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 class="modal-title">Revoke Item</h2>
+            <p class="modal-message">Are you sure you want to revoke this found item? This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeRevokeModal()">Cancel</button>
+                <button class="modal-btn confirm" onclick="confirmRevoke()">Revoke</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

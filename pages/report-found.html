@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Found Item - FINDIT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="form-body">
+    <div class="container">
+        <header class="header glass">
+            <a href="dashboard.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+            <div class="logo">
+                <i class="fas fa-search"></i>
+                <h3>FINDIT</h3>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <div class="form-card glass">
+                <h2><i class="fas fa-check-circle"></i> Report Found Item</h2>
+                <form id="foundItemForm" class="report-form">
+                    <div class="input-group">
+                        <label>Item Name</label>
+                        <input type="text" id="foundItemName" placeholder="e.g., Blue umbrella" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Description (Optional)</label>
+                        <textarea id="foundDescription" placeholder="Add more details about the found item..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Upload Photo (Optional)</label>
+                        <input type="file" id="foundImage" accept="image/*">
+                        <div class="image-preview" id="foundImagePreview"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Report Found Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

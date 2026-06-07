@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FINDIT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <div class="container">
+        <header class="header glass">
+            <div class="logo">
+                <i class="fas fa-search"></i>
+                <h3>FINDIT</h3>
+            </div>
+            <div class="user-info">
+                <span id="userName">User</span>
+                <a href="login.html" class="btn btn-outline btn-sm">Logout</a>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="welcome-section glass">
+                <h1>Welcome back, <span id="dashboardUserName">User!</span></h1>
+                <p>Manage your lost and found items efficiently</p>
+            </div>
+
+            <div class="dashboard-grid" id="dashboardGrid">
+    <a href="report-lost.html" class="dash-card glass">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h3>Report Lost Item</h3>
+        <p>Report an item you've lost</p>
+    </a>
+    <a href="report-found.html" class="dash-card glass">
+        <i class="fas fa-check-circle"></i>
+        <h3>Report Found Item</h3>
+        <p>Report an item you've found</p>
+    </a>
+    <a href="found-items.html" class="dash-card glass">
+        <i class="fas fa-eye"></i>
+        <h3>View Found Items</h3>
+        <p>Browse all found items</p>
+    </a>
+    <a href="my-lost-items.html" class="dash-card glass">
+        <i class="fas fa-list"></i>
+        <h3>My Lost Items</h3>
+        <p>View your reported lost items</p>
+    </a>
+    
+    <!-- ADMIN ONLY - Hidden by default -->
+    <a href="admin.html" class="dash-card glass admin-card" id="adminPortalCard" style="display: none;">
+        <i class="fas fa-crown"></i>
+        <h3>Admin Portal</h3>
+        <p>Admin controls & claim management</p>
+    </a>
+</div>
+        </main>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
